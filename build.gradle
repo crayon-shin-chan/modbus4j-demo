@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = 'czy.demo'
+archivesBaseName = 'modbus4j-demo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://maven.mangoautomation.net/repository/ias-release/'
+    }
+}
+
+dependencies {
+    compile group: 'com.infiniteautomation', name: 'modbus4j', version: '3.0.4'
+}
